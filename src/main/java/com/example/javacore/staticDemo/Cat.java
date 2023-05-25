@@ -1,4 +1,4 @@
-package com.example.srpingcorerush.staticDemo;
+package com.example.javacore.staticDemo;
 
 public class Cat {
     Cat(){
