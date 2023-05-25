@@ -3,7 +3,7 @@ package com.example.javacore.threadpool.demo1;
 import java.util.concurrent.*;
 
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
 //        /**
 //         * 一些常见的jdk提供的线程池
 //         * */
@@ -18,19 +18,22 @@ public class Test {
 //         * 自定义线程池
 //         * */
 //
-//        ExecutorService es4 =new ThreadPoolExecutor(
-//                5,
-//                6,
-//                30,
-//                TimeUnit.SECONDS,
-//                new ArrayBlockingQueue<>(3));
+        ExecutorService es4 =new ThreadPoolExecutor(
+                5,
+                6,
+                30,
+                TimeUnit.SECONDS,
+                new ArrayBlockingQueue<>(3));
+
 
         PrintTimeTask timeTask = new PrintTimeTask();
 
         CustomThreadPool customThreadPool = new CustomThreadPool();
 
         for (int i = 0; i < 4; i++) {
-            customThreadPool.execute(timeTask);
+           // customThreadPool.execute(timeTask);
+            Future future = customThreadPool.submit(timeTask);
+            future.get();
         }
     }
 }

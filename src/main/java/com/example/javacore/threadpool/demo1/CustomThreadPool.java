@@ -17,7 +17,17 @@ public class CustomThreadPool {
                6,
                30,
                TimeUnit.SECONDS,
-                new ArrayBlockingQueue<>(3));
+               new ArrayBlockingQueue<>(3),
+               new ThreadFactory() {
+                   @Override
+                   public Thread newThread(Runnable r) {
+                       Thread thread = new Thread();
+                       thread.setName("定制化名称");
+                       thread.setDaemon(true);
+                       thread.setPriority(3);//优先级
+                       return thread;
+                   }
+               });
 
     }
 
@@ -25,5 +35,8 @@ public class CustomThreadPool {
         executorService.execute(task);
     }
 
-
+    public Future submit(Runnable task){
+        Future future = executorService.submit(task);
+        return future;
+    }
 }
