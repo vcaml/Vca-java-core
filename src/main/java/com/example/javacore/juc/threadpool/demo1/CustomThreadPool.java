@@ -1,4 +1,4 @@
-package com.example.javacore.threadpool.demo1;
+package com.example.javacore.juc.threadpool.demo1;
 
 import java.util.concurrent.*;
 
