@@ -35,13 +35,13 @@ public class DemoTest {
 
     //get方法例子
     public static void getf(){
-        OkHttpClient client = new OkHttpClient();
+       // OkHttpClient client = new OkHttpClient();
         Request getRequest = new Request.Builder()
                 .url("https://jsonplaceholder.typicode.com/posts/1")
                 .build();
 
         try {
-            Response response = client.newCall(getRequest).execute();
+            Response response = OkHttpClientSingleton.getInstance().newCall(getRequest).execute();
             System.out.println(response.body().string());
         } catch (IOException e) {
             e.printStackTrace();
@@ -63,7 +63,7 @@ public class DemoTest {
                 .build();
 
         try {
-            Response response = client.newCall(postRequest).execute();
+            Response response = OkHttpClientSingleton.getInstance().newCall(postRequest).execute();
             System.out.println(response.body().string());
         } catch (IOException e) {
             e.printStackTrace();
@@ -71,6 +71,7 @@ public class DemoTest {
     }
     public static void main(String[] args) {
           getf();
-          postf();
+          getf();
+         // postf();
     }
 }
