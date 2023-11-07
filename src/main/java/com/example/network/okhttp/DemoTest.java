@@ -12,6 +12,27 @@ import java.io.IOException;
  * */
 public class DemoTest {
 
+//    自定义配置OkHttpClient示例
+//    OkHttpClient client = new OkHttpClient.Builder()
+//            .cache(cache) // configure cache, see above
+//            .proxy(proxy) // configure proxy, see above
+//            .certificatePinner(certificatePinner) // certificate pinning, see above
+//            .addInterceptor(interceptor) // app level interceptor, see above
+//            .addNetworkInterceptor(interceptor) // network level interceptor, see above
+//            .authenticator(authenticator) // authenticator for requests (it supports similar use-cases as "Authorization header" earlier
+//            .callTimeout(10000) // default timeout for complete calls
+//            .readTimeout(10000) // default read timeout for new connections
+//            .writeTimeout(10000) // default write timeout for new connections
+//            .dns(dns) // DNS service used to lookup IP addresses for hostnames
+//            .followRedirects(true) // follow requests redirects
+//            .followSslRedirects(true) // follow HTTP tp HTTPS redirects
+//            .connectionPool(connectionPool) // connection pool used to recycle HTTP and HTTPS connections
+//            .retryOnConnectionFailure(true) // retry or not when a connectivity problem is encountered
+//            .cookieJar(cookieJar) // cookie manager
+//            .dispatcher(dispatcher) // dispatcher used to set policy and execute asynchronous requests
+//            .build();
+
+
     //get方法例子
     public static void getf(){
         OkHttpClient client = new OkHttpClient();
