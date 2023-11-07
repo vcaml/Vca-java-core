@@ -7,6 +7,8 @@ import java.io.IOException;
 /**
  * 最简单的okhttp的使用例子。 直接new一个client使用（后续可以优化成单例创建client）
  * https://jsonplaceholder.typicode.com/posts/1 是jsonplaceholder网站免费的测试api假数据调用
+ *
+ * 教程链接：https://blog.logrocket.com/a-complete-guide-to-okhttp/
  * */
 public class DemoTest {
 
