@@ -1,9 +1,13 @@
-package com.example.srpingcorerush.aop;
+package com.example.srpingcorerush.aop.jdkProxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
+/**
+ * jdk动态代理，通过一个简单的例子表现jdk动态代理的底层核心原理
+ * 真实的jdk动态代理源码比这个复杂很多 但是核心不变
+ * */
 public class JdkProxyDemo {
 
     interface Foo{
