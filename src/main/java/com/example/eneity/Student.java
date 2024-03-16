@@ -26,4 +26,8 @@ public class Student {
     public Student() {
 
     }
+
+    public void show(){
+        System.out.println("这是一个只知道打游戏的好学生");
+    }
 }
