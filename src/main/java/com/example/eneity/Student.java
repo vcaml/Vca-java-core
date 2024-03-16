@@ -22,4 +22,8 @@ public class Student {
         this.ranking=ranking;
         this.sex=sex;
     }
+
+    public Student() {
+
+    }
 }
