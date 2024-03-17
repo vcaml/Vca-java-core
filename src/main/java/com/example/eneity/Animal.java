@@ -3,7 +3,7 @@ package com.example.eneity;
 import lombok.Getter;
 import lombok.Setter;
 
-public class Animal {
+public abstract class Animal {
 
     @Setter
     @Getter
@@ -22,4 +22,5 @@ public class Animal {
         System.out.println("这是一个动物");
     }
 
+   public abstract void eat();
 }

@@ -17,7 +17,6 @@ public class InheritanceDemo {
         System.out.println(a2.getName());
         show(a2);
 
-
     }
 
     public static void show(Animal animal){
